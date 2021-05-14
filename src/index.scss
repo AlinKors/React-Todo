@@ -1,0 +1,89 @@
+%center-align{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+%button-box-setting{
+  background: #fefefe;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  color: #ead8d7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todo{
+  &__header{
+    font-size: 3rem;
+    padding-top: 5vh;  
+    min-height: 20vh;
+    @extend %center-align;
+  }
+
+  &__main-box{
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -10px 20px 40px 0px rgba(0, 0, 0, 0.2),
+    -5px 5px 5px 0px rgba(0, 0, 0, 0.1);;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+
+
+    &__box{
+      position: relative;
+      @extend %center-align;
+
+      input{
+        cursor: text;
+        min-width: 100%;
+        border: 1px solid #e9e9e9;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size: 1.3rem;
+        height: 48px;
+        box-shadow: 0px -5px 3px -5px rgba(34, 60, 80, 0.2) inset;
+        @extend %button-box-setting;
+      }
+
+      ::placeholder {
+        color: #e6e6e6;
+        font-size: 1.3rem;
+        font-style: italic;
+      } 
+      
+      input[type='text']{
+        padding-left: 2.5rem;
+        border: 1px solid #e9e9e9;
+        outline:none;
+      }
+
+      button{
+        position: absolute;
+        color: #e6e6e6;
+        z-index: 1;
+        border: none;
+        outline:none;
+        left: 0.75em;
+        top: 0.4em;
+        height: 10px;
+        @extend %button-box-setting;
+      }
+    }
+  }
+}
