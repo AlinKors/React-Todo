@@ -6,7 +6,10 @@ import classNames from 'classnames';
 
 
 const MenuButtons = ({sub,
+<<<<<<< HEAD
     setTodos,
+=======
+>>>>>>> 55dabc689d2a5157705217db28a88f199bf0dd7d
     items, 
     butt,
     setButton, 
@@ -20,7 +23,11 @@ const MenuButtons = ({sub,
             }
             else{
                 return(
+<<<<<<< HEAD
                     <button className="menu-buttons__button-clear" onClick={deleteCompleted}>Clear completed</button>
+=======
+                    <button className="menu-buttons__button-clear">Clear completed</button>
+>>>>>>> 55dabc689d2a5157705217db28a88f199bf0dd7d
                 );
             }
         }
@@ -30,11 +37,14 @@ const MenuButtons = ({sub,
         setButton(pressButton);
     }
 
+<<<<<<< HEAD
     const deleteCompleted = (e) =>{
         const newItems = items.filter(el => el.checked == false);
         setTodos({items: newItems});
     }
 
+=======
+>>>>>>> 55dabc689d2a5157705217db28a88f199bf0dd7d
     if(!sub){
         return null
     
